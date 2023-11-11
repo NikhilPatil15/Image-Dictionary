@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #212121;
+    font-family: 'Quicksand',sans-serif;
+    color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+}
+nav{
+   width: 100%;
+   height: 100px;
+   margin-top: 0;
+   padding-top:0 ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+nav img{
+    margin-left:4rem;
+    width: 80px;
+}
+nav ul{
+    margin-top: 10px;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding: 2rem 0;
+    justify-content: right;
+}
+nav ul li{
+    padding: 0 2rem 1rem 0;
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.5s;
+    display: block;
+}
+nav ul li a:hover{
+    transform: scale(1.3);
+    opacity: 1;
+    color: blueviolet;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.searchbar{
+    display: flex;
+    margin-top: 10px;
+    padding:10px ;
+}
+form{
+    width: 30rem;
+}
+input, #searchbutton {
+    border: 0;
+    font-size: 1.8rem;
+  }
+  input{
+   text-align: center;
+    background-color: white;
+    padding: 10px 5px;
+    outline: 0;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all  2s ;
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+   
+  }
+  #searchbutton{
+    cursor: pointer;
+    display: none;
+    width: 6rem;
+    color: #fff;
+    background-color: blueviolet;
+    font-weight: bold;
+    border-radius: 0 .7rem .7rem 0;
+  }
+  input:not(:placeholder-shown) {
+    border-radius: .7rem 0 0 .7rem;
+    + #searchbutton {
+     display:block;
+    }
+  }
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 1rem auto;
+}
+.search-result{
+    
+    margin-bottom: 60px;
+    width: 48%;
+    border: 5px;
+    overflow: hidden; 
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0, 0,0,5);
+}
+.search-result img{
+  margin-top: 1rem;
+   height: 90%;
+    width: 500px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+    opacity: .6;
+}
+.search-result a{
+ 
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+#show-more{
+    text-align: center;
+    width: 1600px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    display: block;
+    margin: 5px auto;
+    color:#212121;
+    /* filter: blur(1); */
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+#show-more:hover{
+    opacity: .7;
+}
+@media screen and (max-width:786px){
+    nav img{
+        margin-left:2rem;
+        width: 60px;
+    }
+    .search-results{
+        margin-left:7.8rem;
+        width: 75%;
+    }
+    .search-result{
+    margin-bottom: 30px;
+    width: 90%;
+    height: 100%;
+    border: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0, 0,0,5);
+    }
+    .search-result img{
+        width: 100%;
+        object-fit: cover;
+        transition: opacity 0.2s ease-in-out;
+    }
+}
+@media screen and (max-width:480px){
+    nav{
+        width: 100%;
+        height: 100px;
+        margin-top: 0;
+        padding-top:0 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     nav ul{
+        display: flex;
+        width: 85%;
+        margin-top: 8px;
+        padding: 2rem 0;
+    }
+    form{
+        width: 20rem;
+    }
+    nav img{
+        margin-left:1rem;
+        /* width: 60px; */
+    }
+    .search-results{
+        margin-left:3.5rem;
+        width: 85%;
+    }
+    .search-result{
+    margin-bottom: 30px;
+    width: 90%;
+    height: 100%;
+    border: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0, 0,0,5);
+    }
+    .search-result img{
+        width: 100%;
+        object-fit: cover;
+        transition: opacity 0.2s ease-in-out;
+    }
+}
